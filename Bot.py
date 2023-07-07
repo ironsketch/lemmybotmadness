@@ -54,6 +54,7 @@ def getCommunities(extdomain):
             for comm in communities:
                 addy = comm["community"]["actor_id"] # https://lemmygrad.ml/c/mmtc (example)
                 addySplit = addy.split('/')
+                # This domain does not always match the external domain we are searching on.
                 communityFoundExtDomain = addySplit[2]
                 print("Subscribing to: " + comm["community"]["name"])
 
