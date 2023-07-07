@@ -24,7 +24,7 @@ def follow(id):
     global jwt 
     global apiaddy
 
-    # In order to follow a community, you need the idea, follow = true and the authentication
+    # In order to follow a community, you need the id, follow = true and the authentication
     follow_payload = { "community_id": id, "follow": True, "auth": jwt }
     requests.post(apiaddy + "community/follow", timeout=15, json=follow_payload)
 
